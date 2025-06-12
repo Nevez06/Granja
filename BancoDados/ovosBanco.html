@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados Salvos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
-
 <body>
     <div class="container">
-        <img src="img/logo.png" alt="Logo" class="logo">
+        <img src="../img/logo.png" alt="Logo" class="logo">
         <h1>Dados Salvos</h1>
         <div class="table-section">
-            <h2>Produtores</h2>
+            <h2>Ovos</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Tipo</th>
-                        <th>CPF</th>
+                        <th>Cor da Casca</th>
+                        <th>Tamanho</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody id="produtor-list">
+                <tbody id="ovos-list">
                     <!-- Os dados serão carregados aqui -->
                 </tbody>
             </table>
         </div>
         <div class="button-group">
-            <button class="action-button" onclick="window.location.href='menuBanco.html'">Voltar</button>
+            <button class="action-button" onclick="window.location.href='../BancoDados/menuBanco.html'">Voltar</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="./pessoaBanco.js" defer></script>
+    <script src="../javaScript/ovosBanco.js" defer></script>
 </body>
-
 </html>
