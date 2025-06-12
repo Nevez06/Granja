@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Salvos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Dados Salvos</h1>
+
+        <div class="table-section">
+            <h2>Produtores</h2>
+            <button class="delete-button" onclick="excluirTabela('produtores', '#dados-tabela-produtores tbody')">Excluir Tabela</button>
+            <table id="dados-tabela-produtores">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados de produtores serão preenchidos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-section">
+            <h2>Produção de Ovos</h2>
+            <button class="delete-button" onclick="excluirTabela('producoes', '#dados-tabela-producoes tbody')">Excluir Tabela</button>
+            <table id="dados-tabela-producoes">
+                <thead>
+                    <tr>
+                        <th>Idade da Galinha</th>
+                        <th>Raça</th>
+                        <th>Produção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados de produção serão preenchidos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-section">
+            <h2>Recolhimento</h2>
+            <button class="delete-button" onclick="excluirTabela('recolhimentos', '#dados-tabela-recolhimentos tbody')">Excluir Tabela</button>
+            <table id="dados-tabela-recolhimentos">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Quantidade Recolhida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados de recolhimento serão preenchidos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-section">
+            <h2>Ovos</h2>
+            <button class="delete-button" onclick="excluirTabela('ovos', '#dados-tabela-ovos tbody')">Excluir Tabela</button>
+            <table id="dados-tabela-ovos">
+                <thead>
+                    <tr>
+                        <th>Cor da Casca</th>
+                        <th>Tamanho</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados de ovos serão preenchidos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-group">
+            <button class="action-button" onclick="window.location.href='menu.html'">Voltar</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarDados('produtores', '#dados-tabela-produtores tbody');
+            carregarDados('producoes', '#dados-tabela-producoes tbody');
+            carregarDados('recolhimentos', '#dados-tabela-recolhimentos tbody');
+            carregarDados('ovos', '#dados-tabela-ovos tbody');
+        });
+
+        function carregarDados(chave, tabelaSeletor) {
+            const dados = JSON.parse(localStorage.getItem(chave)) || [];
+            const tbody = document.querySelector(tabelaSeletor);
+
+            dados.forEach(item => {
+                const tr = document.createElement('tr');
+                Object.values(item).forEach(valor => {
+                    const td = document.createElement('td');
+                    td.textContent = valor;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        }
+
+        function excluirTabela(chave, tabelaSeletor) {
+            // Remove os dados do localStorage
+            localStorage.removeItem(chave);
+            // Limpa o conteúdo do tbody da tabela
+            const tbody = document.querySelector(tabelaSeletor);
+            tbody.innerHTML = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Ovo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Cadastro do Ovo</h1>
+
+        <form id="ovosForm">
+            <div class="input-group">
+                <label for="corDaCasca">Cor da Casca:</label>
+                <select id="corDaCasca" name="corDaCasca" required>
+                    <option value="" disabled selected>Cor da Casca</option>
+                    <option value="branca">Branca</option>
+                    <option value="marrom">Marrom</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="tamanho">Tamanho:</label>
+                <select id="tamanho" name="tamanho" required>
+                    <option value="" disabled selected>Tamanho</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button type="button" class="action-button" onclick="cadastrarOvos()">Salvar</button>
+                <button type="button" class="action-button" onclick="window.location.href='menu.html'">Voltar</button>
+            </div>
+        </form>
+
+        <div id="ovo-list"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="ovos.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Login</h1>
+
+        <!-- Campo para E-mail -->
+        <div class="input-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="E-mail" required>
+        </div>
+
+        <!-- Campo para Senha -->
+        <div class="input-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Senha" required>
+        </div>
+
+        <!-- Botões -->
+        <div class="button-group">
+            <button class="action-button" id="login-button">Login</button>
+            <button class="action-button" onclick="window.location.href='index.html'">Voltar</button>
+        </div>
+    </div>
+
+    <!-- Carregamento do script Supabase e do login.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="login.js" defer></script>
+</body>
+
+</html>

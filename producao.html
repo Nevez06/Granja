@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produção de Ovos</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Informações Da Galinha</h1>
+        <form id="producaoForm">
+        <div class="input-group">
+            <label for="galinha">Idade da Galinha:</label>
+            <input type="text" id="galinha" placeholder="Galinha">
+        </div>
+        
+        <div class="input-group">
+            <label for="raca">Raça:</label>
+            <input type="text" id="raca" placeholder="Raça">
+        </div>
+        
+        <div class="input-group">
+            <label for="meses">Produção:</label>
+            <input type="number" id="meses" placeholder="Produção">
+        </div>
+        
+        <div class="button-group">
+            <button type="button" class="action-button" onclick="cadastrarProducao()">Salvar</button>
+            <button type="button" class="action-button" onclick="window.location.href='menu.html'">Voltar</button>
+        </div>
+    </form>
+        <div id="producao-list"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="./producao.js" defer></script>
+</body>
+</html>

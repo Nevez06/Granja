@@ -1,0 +1,183 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #d5d5a0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1200px; /* Ajuste para permitir largura maior em telas grandes */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+}
+
+.logo {
+    width: auto; /* Ajusta a largura automaticamente */
+    max-width: 150px; /* Define um tamanho máximo para a largura da logo */
+    height: auto; /* Ajusta a altura automaticamente */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%; /* Garante que os grupos de entrada usem a largura disponível */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%; /* Ajusta a largura dos campos para preencher o container */
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Alinha os botões verticalmente */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões */
+    width: 100%; /* Garante que os botões usem a largura disponível */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #555;
+    color: white;
+}
+
+.action-button,
+.delete-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+    max-width: 280px; /* Define um tamanho máximo para os botões */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.action-button:hover,
+.delete-button:hover {
+    background-color: #333;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    background-color: #666;
+    color: white;
+}
+
+thead th {
+    background-color: #444;
+}
+
+table {
+    width: 100%; /* Garante que a tabela use todo o espaço disponível do contêiner */
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .logo {
+        max-width: 120px; /* Ajusta o tamanho máximo da logo para telas menores */
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .action-button,
+    .delete-button {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 100px; /* Reduz ainda mais o tamanho da logo em telas muito pequenas */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 14px;
+    }
+
+    .button-group {
+        gap: 5px; /* Reduz o espaçamento entre os botões */
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
