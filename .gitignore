@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Builds
+dist/
+build/
+release/
+out/
+*.exe
+*.app
+*.dmg
+
+# Electron
+.electron/
+cache/
+temp/
+*.asar
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Webpack, Babel, Parcel
+.cache/
+parcel-cache/
+babel-cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# HTML/CSS temporários
+*.bak
+*.swp
