@@ -1,2 +1,2 @@
 # Granja
-https://git-lfs.com/
+https://nevez06.github.io/Granja/
